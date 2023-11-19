@@ -1,25 +1,16 @@
-// Factory Function
+// Enumerating Object
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  },
+};
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log('Draw');
-    },
-  };
-}
+for (let key in circle) console.log(key, circle[key]);
 
-const circle1 = createCircle(1);
-console.log(circle1);
+for (let key of Object.keys(circle)) console.log(key);
 
-const circle2 = createCircle(4);
-console.log(circle2);
+for (let entry of Object.entries(circle))
+  console.log(entry);
 
-// Constructor Function
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log('drew');
-  };
-}
-const circle = new Circle(3);
+if ('radius' in circle) console.log('yes');
