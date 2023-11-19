@@ -1,8 +1,23 @@
-// Template literal
+// Factory Function
+const address = showAddress('a', 'b', 'c');
 
-const message = 'John!';
+function showAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode,
+  };
+}
 
-const another = `Hi ${message} ${1 + 3},
-Thank you for joining my mailing list.
+console.log(showAddress(address));
 
-Regards, Murat`;
+// Constructor Function
+
+function CreateAddress(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
+}
+
+const another = new CreateAddress('1', '2', '3');
+console.log(another);
