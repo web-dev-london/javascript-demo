@@ -1,16 +1,3 @@
-// Factory Function
-const address = showAddress('a', 'b', 'c');
-
-function showAddress(street, city, zipCode) {
-  return {
-    street,
-    city,
-    zipCode,
-  };
-}
-
-console.log(showAddress(address));
-
 // Constructor Function
 
 function CreateAddress(street, city, zipCode) {
@@ -20,4 +7,21 @@ function CreateAddress(street, city, zipCode) {
 }
 
 const another = new CreateAddress('1', '2', '3');
-console.log(another);
+const another2 = new CreateAddress('1', '2', '3');
+const another3 = another;
+
+function areEqual(another, another2) {
+  return (
+    another.street === another2.street &&
+    another.city === another2.city &&
+    another.zipCode === another2.zipCode
+  );
+}
+
+function areSame(another, another2) {
+  return another === another2;
+}
+
+console.log(areSame(another, another2));
+console.log(areEqual(another, another2));
+console.log(areSame(another, another3));
