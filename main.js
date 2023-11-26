@@ -11,8 +11,8 @@ const circle = {
 //   another[key] = circle[key];
 // }
 
-// const another = Object.assign({}, circle);
+const another = Object.assign({}, circle);
 
-const another = { ...circle };
+// const another = { ...circle };
 
 console.log(another);
