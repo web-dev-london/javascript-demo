@@ -1,11 +1,26 @@
-function Post(title, body, author) {
-  this.title = title;
-  this.body = body;
-  this.author = author;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
+const priceRange = [
+  {
+    label: '$',
+    tooltip: 'Inpexpensive',
+    minPerPerson: 0,
+    maxPerPerson: 10,
+  },
+  {
+    label: '$$',
+    tooltip: 'Moderate',
+    minPerPerson: 11,
+    maxPerPerson: 20,
+  },
+  {
+    label: '$$$',
+    tooltip: 'Expensive',
+    minPerPerson: 21,
+    maxPerPerson: 50,
+  },
+];
 
-const notPosted = new Post('a', 'b', 'c');
-console.log(notPosted);
+const restaurants = [
+  {
+    averagePerPerson: 5,
+  },
+];
