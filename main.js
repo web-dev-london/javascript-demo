@@ -1,27 +1,18 @@
-// Constructor Function
+// Factory function
 
-function CreateAddress(street, city, zipCode) {
-  this.street = street;
-  this.city = city;
-  this.zipCode = zipCode;
+function createCircle(radius) {
+  return {
+    radius,
+    isVisible: true,
+    draw() {
+      return `Hello Draw`;
+    },
+    conor: [1, '2', 3],
+  };
 }
 
-const another = new CreateAddress('1', '2', '3');
-const another2 = new CreateAddress('1', '2', '3');
-const another3 = another;
+const circle1 = createCircle(2);
+console.log(`Hello Circle`, circle1);
 
-function areEqual(another, another2) {
-  return (
-    another.street === another2.street &&
-    another.city === another2.city &&
-    another.zipCode === another2.zipCode
-  );
-}
-
-function areSame(another, another2) {
-  return another === another2;
-}
-
-console.log(areSame(another, another2));
-console.log(areEqual(another, another2));
-console.log(areSame(another, another3));
+const circle2 = createCircle(4);
+console.log(`Another Circel`, circle2);
