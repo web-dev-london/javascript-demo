@@ -1,10 +1,18 @@
-// Constructor function
-
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
+const circle = {
+  radius: 45,
+  draw() {
     return `Hello Murod`;
-  };
-}
+  },
+};
 
-const circle5 = new Circle(5);
+// const another = {};
+
+// for (let key in circle) {
+//   another[key] = circle[key];
+// }
+
+// const another = Object.assign({}, circle);
+
+const another = { ...circle };
+
+console.log(another);
