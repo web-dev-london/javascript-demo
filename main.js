@@ -1,11 +1,23 @@
-const address = {
-  street: 'a',
-  city: 1,
-  zipCode: true,
-};
+const address = createAddress('a', 'b', 'c');
 
-function showAddress(address) {
-  return { ...address };
+function createAddress(street, city, postCode) {
+  return {
+    street,
+    city,
+    postCode,
+  };
+}
+console.log(createAddress(address));
+
+function CreateAddress(street, city, postCode) {
+  this.street = street;
+  this.city = city;
+  this.postCode = postCode;
 }
 
-showAddress(address);
+const address2 = new CreateAddress(
+  'John',
+  'Mary',
+  'Harry',
+);
+console.log(address2);
