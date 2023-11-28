@@ -1,26 +1,5 @@
-const priceRange = [
-  {
-    label: '$',
-    tooltip: 'Inpexpensive',
-    minPerPerson: 0,
-    maxPerPerson: 10,
-  },
-  {
-    label: '$$',
-    tooltip: 'Moderate',
-    minPerPerson: 11,
-    maxPerPerson: 20,
-  },
-  {
-    label: '$$$',
-    tooltip: 'Expensive',
-    minPerPerson: 21,
-    maxPerPerson: 50,
-  },
-];
+function doubleNumbers(arr) {
+  return arr.map((item) => item * 2);
+}
 
-const restaurants = [
-  {
-    averagePerPerson: 5,
-  },
-];
+console.log(doubleNumbers([2, 5, 100]));
