@@ -1,13 +1,41 @@
-function fizzBuzz(input) {
-  if (typeof input !== 'number') return `Not a Number`;
+// showStars(5);
 
-  if (input % 3 === 0 && input % 5 === 0)
-    return `FizzBuzz`;
+// function showStars(rows) {
+//   for (let i = 1; i <= rows; i++) {
+//     let pattern = '';
+//     for (let y = 0; y < i; y++) pattern += '*';
+//     console.log(`${i} ${pattern}`);
+//   }
+// }
 
-  if (input % 3 === 0) return `Fizz`;
-
-  if (input % 5 === 0) return `Buzz`;
-  return input;
+// Make an array of the names in h1s, and the ages in h2s
+function readyToPutInTheDOM(array) {
+  return array.map(
+    ({ name, age }) => `<h1>${name}</h1> <h2>${age}</h2>`,
+  );
 }
 
-fizzBuzz();
+console.log(
+  readyToPutInTheDOM([
+    {
+      name: 'Angelina Jolie',
+      age: 80,
+    },
+    {
+      name: 'Eric Jones',
+      age: 2,
+    },
+    {
+      name: 'Paris Hilton',
+      age: 5,
+    },
+    {
+      name: 'Kayne West',
+      age: 16,
+    },
+    {
+      name: 'Bob Ziroll',
+      age: 100,
+    },
+  ]),
+);
