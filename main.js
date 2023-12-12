@@ -1,10 +1,9 @@
 function countLetter(string) {
-  const count = {};
+  return string.split('').reduce((count, char) => {
+    count[char] = (count[char] || 0) + 1;
 
-  string.split('').forEach((el) => {
-    count[el] ? count[el]++ : (count[el] = 1);
-  });
-  return count;
+    return count;
+  }, {});
 }
 
 console.log(countLetter('ababscd'));
