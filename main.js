@@ -1,12 +1,16 @@
-function getGrade(...numbers) {
-  const average =
-    numbers.reduce((a, b) => a + b) / numbers.length;
+const person = {
+  firstName: 'Murod',
+  lastName: 'Akhmedov',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(' ');
 
-  if (average < 60) return 'F';
-  if (average < 70) return 'D';
-  if (average < 80) return 'C';
-  if (average < 90) return 'B';
-  return 'A';
-}
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
 
-console.log(getGrade(30, 40, 50));
+person.fullName = 'John Smith';
+console.log(person);
