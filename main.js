@@ -1,9 +1,12 @@
-function countLetter(string) {
-  return string.split('').reduce((count, char) => {
-    count[char] = (count[char] || 0) + 1;
+function getGrade(...numbers) {
+  const average =
+    numbers.reduce((a, b) => a + b) / numbers.length;
 
-    return count;
-  }, {});
+  if (average < 60) return 'F';
+  if (average < 70) return 'D';
+  if (average < 80) return 'C';
+  if (average < 90) return 'B';
+  return 'A';
 }
 
-console.log(countLetter('ababscd'));
+console.log(getGrade(30, 40, 50));
